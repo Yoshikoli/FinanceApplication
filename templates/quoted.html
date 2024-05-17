@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    {% if quote %}
+    <h3>A share of {{quote['symbol']}} costs:</h3>
+    <h3 style="color: red;">{{quote['price'] | usd}}</h3>
+    {% endif %}
+{% endblock %}
